@@ -1,0 +1,117 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import 'astro-breadcrumbs/breadcrumbs.css';
+import NavEn from '../components/NavEn.astro';
+import FooterEn from '../components/FooterEn.astro';
+import { Breadcrumbs } from "astro-breadcrumbs";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+    <NavEn />
+    <div class="breadcrumb-wrapper">
+      <p>Current page: </p>
+        <Breadcrumbs>
+        <svg
+        slot="separator"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </Breadcrumbs>
+    </div>
+		<slot />
+    <FooterEn />
+	</body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: 'RobotoRegular';
+    src: url('/fonts/Roboto-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html, body {
+    font-family: 'RobotoRegular', sans-serif;
+    overflow-x:hidden;
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    background: hsla(245, 100%, 10%, 1);
+    background: linear-gradient(270deg, hsla(245, 100%, 10%, 1) 0%, hsla(220, 88%, 34%, 1) 100%);
+    background: -moz-linear-gradient(270deg, hsla(245, 100%, 10%, 1) 0%, hsla(220, 88%, 34%, 1) 100%);
+    background: -webkit-linear-gradient(270deg, hsla(245, 100%, 10%, 1) 0%, hsla(220, 88%, 34%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#040034", endColorstr="#0A3CA1", GradientType=1 );
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+	 :root {
+    --yellow-color: #ffc537;
+    --background-blue-dark: #04369b;
+    --background-blue: #0a3ca1;
+    --yellow-text-shadow: 1px 1px 1px black;
+		--accent: 10, 60, 161;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #ffc537 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	} 
+  .breadcrumb-wrapper {
+    margin: 10px;
+    display: flex;
+    color: var(--yellow-color);
+    text-shadow: (var(--yellow-text-shadow));
+    gap: 5px;
+    align-items: center;
+  }
+  .breadcrumb-wrapper p {
+    position: relative;
+    top: -1px;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      background-color: #04369b;
+    }
+    .breadcrumb-wrapper {
+      margin: 10px;
+      display: flex;
+      color: var(--yellow-color);
+      gap: 5px;
+      align-items: center;
+    }
+  }
+
+</style>

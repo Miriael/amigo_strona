@@ -1,0 +1,78 @@
+---
+import LayoutEn from '../../layouts/LayoutEn.astro';
+import Card from '../../components/Card.astro';
+---
+
+<LayoutEn title="Ośrodek Szkolenia Kierowców AMIGO">
+<main>
+  <div class="about-us__wrapper">
+    <h1>OSK AMIGO - A Driving School For Everyone</h1>
+    <img src="../../3.jpg">
+    <p>Driving School AMIGO  was established in 1991. We are one of the oldest driving schools not just in Lublin, but in the entire region. Our long presence in the market is the best proof of our renown and professionalism, and also allowed us to gain an incredible amount of experience in training drivers. Over 20 000 students have trusted us so far whom have successfully passed both their theoretical and practical exams for various classes of driving licenses, very often on their first try.</p>
+    <div class="side-by-side">
+      <p>We are constantly striving to offer courses of only the highest quality. We teach with passion and engagement, and our instructors are tremendously experienced. We provide our students comprehensive knowledge and support at every stage of their education.</p>
+      <img src="../../4.jpg">
+    </div>
+    <p>We make sure that our driving school classes are tailored to your individual requirements. With us you will familiarize yourself with the tasks and roads that are a part of the driving license test, which will give you confidence during your exam. High rate of passing and the satisfaction of our students are the reasons why our clients often recommend Amigo Driving School to their friends looking to get a driver's license.</p>
+  </div>
+</main>
+</LayoutEn>
+
+<style>
+  img {
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .about-us__wrapper {
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    color: var(--yellow-color);
+    text-shadow: var(--yellow-text-shadow);
+    background-color: var(--background-blue);
+    border-radius: 30px;
+    padding: 30px 30px;
+    width: 80%;
+    margin: 50px auto 80px auto;;
+    box-shadow: 5px 5px 20px var(--background-blue-dark);
+  }
+
+  .side-by-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .side-by-side p {
+    width: 40%;
+    text-align: left;
+  }
+
+  .side-by-side img {
+    width: 60%;
+    max-width: 30ch;
+    max-height: 30ch;
+    margin: 0px;
+  }
+
+  @media (max-width: 600px) {
+    .side-by-side {
+      flex-direction: column;
+    }
+
+    .side-by-side img {
+      width: 100%;
+    }
+
+    .side-by-side p {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+
+</script>

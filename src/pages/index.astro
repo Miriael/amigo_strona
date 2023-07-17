@@ -1,0 +1,230 @@
+---
+import LayoutNoBreadcrumb from './../layouts/LayoutNoBreadcrumb.astro';
+import SlideCard from './../components/SlideCard.astro';
+---
+
+<LayoutNoBreadcrumb title="Ośrodek Szkolenia Kierowców AMIGO">
+  <section class="splide" aria-label="Splide Basic HTML Example">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><div class="slide-img__container"><img src="./3.jpg"><div class="slide-img__text">Na rynku od 1991</div></li>
+        <li class="splide__slide"><div class="slide-img__container"><img src="./3.jpg"><div class="slide-img__text">Ponad 20 000 zadowolonych klientów</div></li>
+        <li class="splide__slide"><div class="slide-img__container"><img src="./3.jpg"><div class="slide-img__text">Szkolenia każdego rodzaju</div></li>
+      </ul>
+    </div>
+  </section>
+  <div class="class-date">
+    <div class="class-date__wrapper">
+      <p>Najbliższy kurs odbędzie się: 12.12.2023</p>
+    </div>
+  </div>
+  <main>
+    <section class="description">
+      <h1>OSK AMIGO - z nami zdobędziesz wymarzone prawo jazdy!<h1/>
+      <p>Ośrodek Szkolenia Kierowców AMIGO to jedna z najlepszych szkół nauki jazdy w Lublinie. Z nami zdobędziesz upragnione prawo jazdy, podniesiesz kwalifikacje i udoskonalisz swoje umiejętności za kierownicą. Naszym priorytetem są Twoje sukcesy, dlatego dbamy nie tylko o jak najlepsze przygotowanie do egzaminów na prawo jazdy, ale również uczymy bezpiecznego poruszania się w ruchu drogowym.</p>
+      <h2>Nie czekaj dłużej i zapisz się już teraz do AMIGO na wybrany kurs lub szkolenie</h2>
+    </section>
+    <section class="stats">
+      <div class="stats__wrapper">
+        <p>Ponad 20 000 zadowolonych klientów</p>
+        <p>Na rynku od 1991 roku</p>
+      </div>
+    </section>
+    <section class="categories">
+      <SlideCard 
+        href="./kursy/placeholder"
+        title="Prawo jazdy każdej kategorii"
+        body="A, A1, A2, AM, B, B-automat, B1, B+E, C, C+E"
+        direction="slidecard-right"/>
+      <SlideCard 
+        href="./kursy/placeholder"
+        title="Szkolenie osób anglojęzycznych"
+        body="kategorie B, C"
+        direction="slidecard-left"/>
+      <SlideCard 
+        href=="./kursy/placeholder"
+        title="Udział biegłego tłumacza na egzaminie państwowym w WORD"
+        body=""
+        direction="slidecard-right"/>
+      <SlideCard 
+        href=="./kursy/placeholder"
+        title="Doszkalanie teoretyczne i praktyczne na wszystkie kat. Prawa jazdy"
+        body=""
+        direction="slidecard-left"/>
+      <SlideCard 
+        href=="./kursy/placeholder"
+        title="Szkolenia na Kwalifikację Wstępną"
+        body="kategorie C, D"
+        direction="slidecard-right"/>
+      <SlideCard 
+        href=="./kursy/placeholder"
+        title="Szkolenia na Kwalifikację Wstępną Przyspieszoną"
+        body="kategorie C, D"
+        direction="slidecard-left"/>
+      <SlideCard 
+        href=="./kursy/placeholder"
+        title="Szkolenia Okresowe kat C, D (co 5 lat)"
+        body=""
+        direction="slidecard-right"/>
+      <SlideCard 
+        href=="./kursy/placeholder"
+        title="Kursy na przewóz towarów niebezpiecznych ADR"
+        body=""
+        direction="slidecard-left"/>
+      <SlideCard 
+        href=="./kursy/placeholder"
+        title="Szkolenia specjalistyczne"
+        body="cysterny, promieniotwórcze, wybuchowe"
+        direction="slidecard-right"/>
+      <SlideCard 
+        href=="./kursy/placeholder"
+        title="Szkolenia na Certyfikat Kompetencji Zawodowych Przewoźnika (ITS)"
+        body=""
+        direction="slidecard-left"/>
+    </section>
+  </main>
+</LayoutNoBreadcrumb>
+
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .class-date {
+    background-color: var(--background-blue-dark);
+  }
+
+  .class-date__wrapper {
+    text-align: center;
+    margin: 0 auto;
+    font-size: clamp(1em, 2.5vw, 2em);
+    padding: 10px 0px;
+    color: var(--yellow-color);
+    text-shadow: var(--yellow-text-shadow);
+  }
+
+  .splide {
+    max-height: 70dvh;
+  }
+
+  .splide img {
+    width: 100%;
+    max-height: 70dvh;
+  }
+
+  .slide-img__container {
+    position: relative;
+    text-align: center;
+  }
+
+  .slide-img__text {
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: var(--yellow-color);
+    text-shadow: var(--yellow-text-shadow);
+  }
+
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin-bottom: 3rem;
+    line-height: 3rem;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  }
+
+  .description {
+    max-width: 1090px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: var(--yellow-color);
+    background-color: var(--background-blue);
+    box-shadow: 5px 5px 20px var(--background-blue-dark);
+    border-radius: 60px;
+    padding: 3em;
+    margin-bottom: 20px;
+    text-shadow: var(--yellow-text-shadow);
+    line-height: 1.9em;
+  }
+
+  .stats {
+    background-color:rgb(153, 19, 19);
+    display: none;
+  }
+
+  .stats__wrapper {
+    text-align: center;
+    padding: 1em 0px;
+    color: var(--yellow-color);
+    font-size: 1.5em;
+    text-shadow: var(--yellow-text-shadow);
+  }
+
+  .categories {
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: center;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2.5em 0px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 600px) {
+    .slide-img__text {
+      display: none;
+    }
+    .stats {
+      clip-path: polygon(0 0,100% 25px,100% 100%,0 100%);
+      display: block;
+    }
+    .stats p + p {
+      margin-top: 20px;
+    }
+    main {
+      width: 100%;
+    }
+    .categories {
+      clip-path: polygon(0 0,100% 25px,100% 100%,0 100%);
+      margin-top: -25px;
+      border-radius: 0px;
+    }
+    .description {
+      width: 90%;
+    }
+    .main-upper-decorator {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+
+<script>
+  import '@splidejs/splide/css';
+  import Splide from '@splidejs/splide';
+  new Splide( '.splide', {
+    autoplay: true,
+    arrows: false,
+    interval: 4000,
+    type: 'loop',
+ 
+  } ).mount();
+</script>

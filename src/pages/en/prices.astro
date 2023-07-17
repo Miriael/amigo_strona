@@ -1,0 +1,152 @@
+---
+import LayoutEn from '../../layouts/LayoutEn.astro';
+---
+
+<LayoutEn title="Ośrodek Szkolenia Kierowców AMIGO">
+  <main>
+    <h1>Price Chart</h1>
+    <section class="bonuses">
+      <p>Certified translator will be provided for your national exam!</p>
+      <p>Ability to pay in installments with no additional fees or charges!</p>
+      <p>1 additional hour of driving free if full price paid in one lump sum!</p>
+      <p>Course can be started 3 months before reaching the age of 18!</p>
+      <p>National exam can be taken in the last month before birthday <br>(license can only be received after birthday)</p>
+      <p>Free study materials with each course!</p>
+    </section>
+    <table>
+      <caption>
+        Driving License Classes
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Class</th>
+          <th scope="col">Min. age required</th>
+          <th scope="col">Course hours</th>
+          <th scope="col">Price</th>
+          <th scope="col">Price for additional hour</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">B</th>
+          <td>18 years old</td>
+          <td>30 practice + 30 theory</td>
+          <td>2800 zł</td>
+          <td>90 zł</td>
+        </tr>
+        <tr>
+          <th scope="row">B automatic</th>
+          <td>18 years old</td>
+          <td>30 practice + 30 theory</td>
+          <td>2900 zł</td>
+          <td>100 zł</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</LayoutEn>
+
+<style>
+  main,
+  body {
+    background: silver;
+  }
+
+  h1,
+  caption {
+    text-shadow: none;
+    color: var(--background-blue-dark)
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--yellow-color);
+    text-shadow: var(--yellow-text-shadow);
+    margin: 0px 0px 50px 0px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .bonuses {
+    width: 100%;
+    position:relative;
+    background-color: rgb(153, 19, 19);
+    text-align: center;
+    font-size: clamp(0.7rem, 2.5vw, 1rem);
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 20px;
+  }
+
+  .bonuses * {
+    margin: 1em;
+  }
+
+  table {
+    width: 80%;
+    margin-left: 180%;
+    background: var(--background-blue);
+    font-size: clamp(0.75rem, 0.1875rem + 1.5vw, 1.5rem);
+    text-align: center;
+    box-shadow: 5px 5px 20px var(--background-blue-dark);  
+  }
+
+  table + table {
+    margin-top: 30px;
+  }
+
+  caption {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  table, th, td {
+    border: 1px solid var(--yellow-color);
+    border-collapse: collapse;
+  }
+
+  tr:nth-child(odd) {
+    background: #164fc0;
+  }
+
+  thead tr th{
+    background: #3f5683;
+  }
+
+  th {
+    width: 20%;
+  }
+
+  .fade-in {
+    transition: margin-left 0.5s ease;
+    margin-left: 0%;
+  }
+
+  @media (max-width: 600px){
+    table {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+// Create the observer
+var observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+      // Add the CSS class that has your animation
+      entry.target.classList.add('fade-in');
+      return;
+    }
+  })
+});
+
+// Observe the element
+var elements = document.querySelectorAll('table');
+elements.forEach(element => observer.observe(element));
+
+</script>

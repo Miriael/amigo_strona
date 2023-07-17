@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Ośrodek Szkolenia Kierowców AMIGO">
+<main>
+  <div class="about-us__wrapper">
+    <h1>OSK Amigo - nauka jazdy dla każdego</h1>
+    <img src="../3.jpg">
+    <p>Ośrodek Szkolenia Kierowców Amigo powstał w 1991 roku. Jesteśmy jedną z najstarszych szkół nauki jazdy nie tylko w Lublinie, ale również w regionie. Ta wieloletnia obecność na rynku najlepiej świadczy o naszej renomie i profesjonalizmie, a także pozwoliła nam zdobyć ogromne doświadczenie w szkoleniu kierowców. Do tej pory zaufało nam ponad 20000 kursantów, którzy z sukcesami zdali egzaminy teoretyczne i praktyczne na różne kategorie prawa jazdy, bardzo często za pierwszym razem.</p>
+    <div class="side-by-side">
+      <p>Nieustannie dbamy o to, żeby oferowane przez nas kursy i szkolenia były jak najwyższej jakości. Uczymy z pasją i zaangażowaniem, a nasi instruktorzy mają bogate doświadczenie. Zapewniamy naszym kursantom kompleksową wiedzę i wsparcie na każdym etapie nauki.</p>
+      <img src="../4.jpg">
+    </div>
+    <p>Dokładamy wszelkich starań, by prowadzone przez nas szkolenia na prawo jazdy były dopasowane do Twoich indywidualnych potrzeb. Z nami zapoznasz się z zadaniami i trasami egzaminacyjnymi, dzięki czemu będziesz czuł się pewnie podczas egzaminu. Wysoka zdawalność i zadowolenie naszych kursantów sprawiają, że chętnie polecają Ośrodek Szkolenia Kierowców Amigo innym osobom, które planują zapisać się na kurs prawa jazdy.</p>
+  </div>
+</main>
+</Layout>
+
+<style>
+  img {
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .about-us__wrapper {
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    color: var(--yellow-color);
+    text-shadow: var(--yellow-text-shadow);
+    background-color: var(--background-blue);
+    border-radius: 30px;
+    padding: 30px 30px;
+    width: 80%;
+    margin: 50px auto 80px auto;;
+    box-shadow: 5px 5px 20px var(--background-blue-dark);
+  }
+
+  .side-by-side {
+    display: flex;
+    align-items: center;
+  }
+
+  .side-by-side p {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .side-by-side img {
+    width: 60%;
+    max-width: 40ch;
+    max-height: 30ch;
+  }
+</style>
+
+<script>
+
+</script>

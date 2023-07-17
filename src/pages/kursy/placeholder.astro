@@ -1,0 +1,60 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import DescriptionCard from '../../components/DescriptionCard.astro'
+---
+
+<Layout title="Ośrodek Szkolenia Kierowców AMIGO">
+  <DescriptionCard
+  title="Szkolenie"
+  body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+  image="../../5.jpg"
+  price="1000zł"
+  />
+  <section class="splide" aria-label="Splide Basic HTML Example">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="slide-img__container">
+            <img src="data:image/png;base64,..."
+            data-splide-lazy="/3.jpg" >
+          </div></li>
+        <li class="splide__slide"><div class="slide-img__container"><img src="/3.jpg"></div></li>
+        <li class="splide__slide"><div class="slide-img__container"><img src="/3.jpg"></div></li>
+      </ul>
+    </div>
+    <ul class="splide__pagination"></ul>
+  </section>
+</Layout>
+
+<style>
+  .splide {
+    width: 90%;
+    margin: 0 auto;
+    max-height: 70dvh;
+    margin-bottom: 40px;
+  }
+
+  .splide img {
+    width: 100%;
+    max-height: 70dvh;
+  }
+
+  .splide__pagination {
+    bottom: -20px;
+  }
+</style>
+
+<script>
+  import '@splidejs/splide/css';
+  import Splide from '@splidejs/splide';
+  new Splide( '.splide', {
+    autoplay: true,
+    arrows: false,
+    interval: 4000,
+    type: 'loop',
+    perPage: 2,
+    gap: '3em',
+    lazyLoad: 'nearby'
+  } ).mount();
+</script>

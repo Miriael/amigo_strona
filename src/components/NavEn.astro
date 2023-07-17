@@ -1,0 +1,268 @@
+<header>
+  <wrapper class="header__wrapper">
+    <div class="logo-wrapper">
+      <a href="../../../../../../en"><img src="" alt="Logo"></a>
+      <p>We teach to drive...well!</p>
+    </div>
+    <div class="nav__wrapper">
+      <nav class="nav__large">
+        <a href="/en/about-us">About us</a>
+        <a href="/en/courses">Courses</a>
+        <a href="/en/prices">Prices</a>
+        <a href="/en/contact">Contact</a>
+        <a href="/en/faq">FAQ</a>
+        <a class="icon" href="/"><img src="/polish-flag.svg" width="30px" height="30px"></a>
+        <a class="icon" href="#"><img src="/Instagram_logo_2016.svg" width="30px"></a>
+        <a class="icon" href="#"><img src="/facebook.svg" width="30px"></a>
+        <a class="icon" href="#"><img src="/youtube.svg" width="30px"></a>
+      </nav>
+      <nav class="nav__small">
+        <a class="icon flag" href="/"><img src="/polish-flag.svg" width="30px"></a>
+        <div id="menu">
+        <div id="menu-bar">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="/en/about-us">About us</a></li>
+            <li><a href="/en/courses">Courses</a></li>
+            <li><a href="/en/prices">Prices</a></li>
+            <li><a href="/en/contact">Contact</a></li>
+            <li><a href="/en/faq">FAQ</a></li>
+            <a class="icon" href="#"><img src="/instagram.svg" width="30px"></a>
+            <a class="icon" href="#"><img src="/facebook.svg" width="30px"></a>
+            <a class="icon" href="#"><img src="/youtube.svg" width="30px"></a>
+          </ul>
+        </nav>
+      </div>
+        <div class="menu-bg" id="menu-bg"></div>
+      </nav>
+    </div>
+  </wrapper>
+</header>
+
+<style>
+  * {
+    margin: 0;
+  }
+
+  .logo-wrapper {
+    position: relative;
+    top: 10px;
+    align-self: center;
+  }
+
+  .logo-wrapper p {
+    font-size: clamp(0.6em, 1.5vw, 1em);
+    color: #ffc537;
+    font-weight: bolder;
+    font-style: italic;
+  }
+
+  #menu {
+    z-index: 2;
+  }
+
+  #menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 30px 30px 20px 0px;
+    cursor: pointer;
+  }
+
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: #ffc537;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  #bar1 {
+    transform: translateY(-4px);
+  }
+
+  #bar3 {
+    transform: translateY(4px);
+  }
+
+  .nav__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-blue);
+    margin-bottom: -10px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  .nav {
+    transition: 0.3s ease;
+    display: none;
+  }
+
+  .nav ul {
+    padding: 0 22px;
+  }
+
+  .nav li {
+    list-style: none;
+    padding: 12px 0;
+  }
+
+  .nav li a {
+    color: #ffc537;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .nav li a:hover {
+    font-weight: bold;
+  }
+
+  .menu-bg, #menu {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, #080064, #0A3CA1);
+    border-radius: 50%;
+    transition: 0.1s ease;
+    transform: translate(60%,-30%)
+  }
+
+  .change {
+    display: block;
+    margin-left: -85px;
+  }
+
+  .change .bar {
+    background-color: white;
+  }
+
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+
+  .change #bar2 {
+    opacity: 0;
+  }
+
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+
+  .change-bg {
+    width: 520px;
+    height: 860px;
+    transform: translate(60%,-30%);
+  }
+
+  header {
+    background-color: #080064;
+    z-index: 999;
+    padding-bottom: 10px;
+  }
+
+  .header__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 15dvh;
+    min-height: 2em;
+    max-height: 7em;
+    gap: 10px;
+  }
+
+  .nav__large {
+    width: 85%;
+    display: flex;
+    gap: 2.2em;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.55rem, 1.5vw, 1.8rem);
+  }
+
+  .nav__large a {
+    position: relative;
+    top: 3px;
+  }
+
+  .nav__large .icon {
+    margin-left: 0.4em;    
+    position: relative;
+    /* Adjust these values accordingly */
+    top: 5px;
+    left: 5px;
+  }
+
+  .nav__large .icon+.icon {
+    margin-left: 1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffc537;
+    font-weight: 700;
+    font-size: 1.25em;
+    text-shadow: 1px 1px 1px black;
+  }
+
+  a:hover {
+    text-shadow: 0px 0px 5px white
+  }
+
+  .nav__small {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .logo-wrapper {
+      margin: 0 auto;
+      position: relative;
+      top: 30%;
+    }
+
+    .flag {
+      position: absolute;
+      top: 4%;
+      right: 20%
+    }
+
+    .nav__wrapper {
+      padding: 0px;
+    }
+
+    .nav__large {
+      display: none;
+    }
+    
+    .nav__small {
+      display: flex;
+    }
+
+    .flag {
+      left: 1.5em;
+    }
+  }
+
+</style>
+
+<script>
+  document.querySelector('#menu-bar').addEventListener('click', () => {
+    document.getElementById("menu-bar").classList.toggle("change");
+    document.getElementById("nav").classList.toggle("change");
+    document.getElementById("menu-bg").classList.toggle("change-bg");
+  })
+</script>

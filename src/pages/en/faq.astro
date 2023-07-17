@@ -1,0 +1,54 @@
+---
+import LayoutEn from '../../layouts/LayoutEn.astro';
+---
+
+<LayoutEn title="Ośrodek Szkolenia Kierowców AMIGO">
+  <main>
+    <h1>Frequenly Asked Questions</h1>
+    <div>
+      <p class="question">What is PKK (driver's candidate profile?</p>
+      <div class="answer">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div>
+      <p class="question">How to acquire a PKK number?</p>
+      <div class="answer">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </main>
+</LayoutEn>
+
+<style>
+  main {
+    color: var(--yellow-color);
+    text-shadow: var(--yellow-text-shadow);
+    background-color: var(--background-blue);
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto 50px auto;
+    padding: 0px 30px 0px 30px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px var(--background-blue-dark);
+    font-size: clamp(0.7rem, 2.5vw, 1rem)
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .question {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .answer {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  div + div {
+    margin-top: 40px;
+  }
+</style>

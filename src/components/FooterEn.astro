@@ -1,0 +1,94 @@
+<footer class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__left">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="footer__right">
+      <p class="title">OSK Amigo</p>
+      <p>Krakowskie Przedmieście 60</p>
+      <p>20-002  Lublin</p>
+      <p>Office: +48 502 219 262</p>
+      <p>Secretariat: +48 815 349 010</p>
+      <p>Management: +48 501 022 660</p>
+    </div>
+    <div class="footer__mobile">
+      <div class="footer__mobile__left">
+        <p class="title">OSK Amigo</p>
+        <p>Krakowskie Przedmieście 60</p>
+        <p>20-002  Lublin</p>
+      </div>  
+      <div class="footer__mobile__right">
+        <p>Office: +48 502 219 262</p>
+        <p>Secretariat: +48 815 349 010</p>
+        <p>Management: +48 501 022 660</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    clip-path: polygon(0 0,100% 25px,100% 100%,0 100%);
+    margin-top: -25px;
+    background-color: #0a3ca1;
+    line-height: 1.5em;
+  }
+
+  .footer__wrapper {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-size: clamp(0.6rem, 1.5vw, 1rem)
+  }
+
+  .title {
+    font-size: clamp(1rem, 5vw, 2rem);
+    line-height: 1.8em;
+  }
+
+  .footer__left {
+    width: 75%;
+  }
+
+  .footer__right * {
+    margin: 0px;
+  }
+  
+  .footer__right {
+    width: 25%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 0px;
+    color: var(--yellow-color);
+    text-shadow: var(--yellow-text-shadow);
+  }
+
+  .footer__mobile * {
+    margin: 0px;
+  }
+
+  .footer__mobile {
+    display: none;
+    margin: 30px auto 20px auto;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px;
+    color: var(--yellow-color);
+    font-size: clamp(0.6rem, 3vw, 1.5rem);
+    text-shadow: var(--yellow-text-shadow);0000000000
+  }
+  
+  @media (max-width: 680px) {
+    .footer__left {
+      display: none;
+    }
+    .footer__right {
+      display: none;
+    }
+    .footer__mobile {
+      display: flex;
+    }
+  }
+</style>

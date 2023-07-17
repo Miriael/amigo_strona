@@ -1,0 +1,19 @@
+{
+  "name": "amigo-strona",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "@splidejs/splide": "^4.1.4",
+    "astro": "^2.7.2",
+    "astro-breadcrumbs": "^1.6.0",
+    "astro-relative-links": "^0.3.4"
+  }
+}

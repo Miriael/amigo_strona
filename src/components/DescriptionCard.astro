@@ -1,0 +1,61 @@
+---
+
+export interface Props {
+	title: string;
+	body: string;
+	image: string;
+  price: string;
+}
+
+const { image, title, body, price } = Astro.props;
+---
+
+<section class="card">
+  <h2>{title}</h2>
+  <div class="content-wrapper">
+    <div class="image-wrapper">
+      <img src={image}/>
+      <p class="price">Cena kursu: {price}</p>
+    </div>
+    <div class="text-wrapper">
+      <p>{body}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    width: auto;
+    max-width: 100%;
+    max-height: 350px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 50px auto 50px auto;
+    background-color: var(--background-blue-dark);
+    height: 500px;
+    border-radius: 50px;
+    color: var(--yellow-color);
+    text-shadow: var(--yellow-text-shadow);
+    box-shadow: 5px 5px 20px var(--background-blue-dark);
+  }
+
+  .content-wrapper {
+    display: flex;
+    gap: 50px;
+  }
+
+  .image-wrapper {
+    width: 30%;
+    margin-left: 30px;
+  }
+
+  .text-wrapper {
+    width: 50%;
+  }
+</style>
