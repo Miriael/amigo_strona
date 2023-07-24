@@ -160,7 +160,7 @@ import SlideCard from './../components/SlideCard.astro';
   }
 
   .stats {
-    background-color:rgb(153, 19, 19);
+    background-color:var(--background-blue-dark);
     display: none;
   }
 
@@ -209,6 +209,13 @@ import SlideCard from './../components/SlideCard.astro';
     }
     .main-upper-decorator {
       display: none;
+    }
+
+    .categories {
+      clip-path: polygon(0 0,100% 25px,100% 100%,0 100%);
+      margin-top: -25px;
+      background-color: white;
+      border-radius: 0px;
     }
 
     h1 {

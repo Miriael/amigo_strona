@@ -113,7 +113,7 @@ import Card from '../components/Card.astro';
           <td>110 zł</td>
         </tr>
         <tr>
-          <th scope="row">B+E</th>
+          <th scope="row">B + E</th>
           <td>18 lat</td>
           <td>15 teoria</td>
           <td>1400 zł</td>
@@ -134,21 +134,21 @@ import Card from '../components/Card.astro';
           <td>120 zł</td>
         </tr>
         <tr>
-          <th scope="row">C+CE</th>
+          <th scope="row">C + CE</th>
           <td>21 lat</td>
           <td>30 praktyka + 25 teoria</td>
           <td>6200 zł</td>
           <td>110 zł</td>
         </tr>
         <tr>
-          <th scope="row">C+CE. (kurs skrócony)</th>
+          <th scope="row">C + CE. (kurs skrócony)</th>
           <td>21 lat</td>
           <td>20 praktyka + 25 teoria</td>
           <td>5400 zł</td>
           <td>110 zł</td>
         </tr>
         <tr>
-          <th scope="row">C+CE+KWPC. (kurs skrócony)</th>
+          <th scope="row">C + CE + KWPC. (kurs skrócony)</th>
           <td>21 lat</td>
           <td>20 praktyka + 25 teoria</td>
           <td>7200 zł</td>
@@ -225,12 +225,13 @@ import Card from '../components/Card.astro';
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
+    color: var(--background-blue);
   }
 
   .bonuses {
     width: 100%;
     position:relative;
-    background-color: rgb(153, 19, 19);
+    background-color: var(--background-blue);
     text-align: center;
     font-size: clamp(0.7rem, 2.5vw, 1rem);
     padding: 5px 0px 5px 0px;
@@ -249,16 +250,23 @@ import Card from '../components/Card.astro';
     font-size: clamp(0.75rem, 0.1875rem + 1.5vw, 1.5rem);
     text-align: center;
     box-shadow: 5px 5px 20px var(--background-blue-dark);  
+    table-layout: fixed;
   }
 
   table + table {
     margin-top: 30px;
   }
 
+  td {
+    height: 60px;
+  }
+
+
   caption {
     font-weight: bolder;
     font-size: 2em;
     margin-bottom: 0.5em;
+    color: var(--background-blue);
   }
 
   table, th, td {

@@ -45,20 +45,15 @@ import { Breadcrumbs } from "astro-breadcrumbs";
     padding: 0px;
     display: flex;
     flex-direction: column;
-    background: hsla(245, 100%, 10%, 1);
-    background: linear-gradient(270deg, hsla(245, 100%, 10%, 1) 0%, hsla(220, 88%, 34%, 1) 100%);
-    background: -moz-linear-gradient(270deg, hsla(245, 100%, 10%, 1) 0%, hsla(220, 88%, 34%, 1) 100%);
-    background: -webkit-linear-gradient(270deg, hsla(245, 100%, 10%, 1) 0%, hsla(220, 88%, 34%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#040034", endColorstr="#0A3CA1", GradientType=1 );
   }
 
   * {
     box-sizing: border-box;
   }
 	 :root {
-    --yellow-color: #ffc537;
-    --background-blue-dark: #04369b;
-    --background-blue: #0a3ca1;
+    --yellow-color: white;
+    --background-blue-dark: #172a92;
+    --background-blue: #172a92;
     --yellow-text-shadow: 1px 1px 1px black;
 		--accent: 10, 60, 161;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #ffc537 30%, white 60%);
@@ -83,9 +78,6 @@ import { Breadcrumbs } from "astro-breadcrumbs";
   }
 
   @media (max-width: 600px) {
-    body {
-      background-color: #04369b;
-    }
     .breadcrumb-wrapper {
       margin: 10px;
       display: flex;
